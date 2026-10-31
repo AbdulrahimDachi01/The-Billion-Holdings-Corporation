@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Billion Holdings Corporation | Stability Through Strategy</title>
+<meta name="description" content="The Billion Holdings Corporation (TBHC) is a parent holding company with independently registered subsidiaries in tourism and human resources. Stability through strategy.">
+<meta name="theme-color" content="#0A0A0A">
+<meta property="og:title" content="The Billion Holdings Corporation (TBHC)">
+<meta property="og:description" content="Stability through strategy.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --black:#0A0A0A; --charcoal:#141414; --ink:#1E1E1E; --graphite:#2A2A2A;
+  --gold:#C9A462; --gold-hi:#F1DCA6; --gold-deep:#8E6B2E; --gold-text:#7D5F24;
+  --text:#EDEBE6; --muted:#A6A29A; --paper:#FFFFFF; --paper-2:#F6F5F1; --paper-ink:#1E1E1E; --paper-muted:#5F5B53; --line-dark:#262626; --line:#E4E1D9;
+  --serif:"Cormorant Garamond",Georgia,serif;
+  --head:"Manrope",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --body:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{margin:0;font-family:var(--body);font-size:16px;line-height:1.7;color:var(--paper-ink);background:var(--paper);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img,svg{display:block;max-width:100%}
+h1,h2,h3{font-family:var(--head);line-height:1.15;margin:0 0 .5em;letter-spacing:-.015em}
+h1{font-size:clamp(2.5rem,5.8vw,4.3rem);font-weight:800}
+h2{font-size:clamp(1.9rem,3.4vw,2.7rem);font-weight:750;color:var(--paper-ink)}
+h3{font-size:1.2rem;font-weight:700;color:var(--paper-ink)}
+p{margin:0 0 1em}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+section{padding:112px 0}
+.dark{background:var(--black);color:var(--text)}
+.dark h2,.dark h3{color:#fff}
+.alt{background:var(--paper-2)}
+.eyebrow{display:inline-flex;align-items:center;gap:12px;font:700 .75rem var(--head);letter-spacing:.2em;text-transform:uppercase;color:var(--gold-text);margin-bottom:18px}
+.eyebrow::before{content:"";width:30px;height:1px;background:var(--gold)}
+.dark .eyebrow{color:var(--gold)}
+.lead{font-size:1.15rem;color:var(--paper-muted);max-width:660px}
+.dark .lead{color:var(--muted)}
+.pending{font-size:.88rem;color:var(--paper-muted);font-style:italic;display:inline-flex;gap:8px;align-items:center}
+.pending::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold);flex:none}
+.dark .pending{color:var(--muted)}
+.head{max-width:740px;margin:0 0 60px}
+.head.center{margin:0 auto 60px;text-align:center}
+.head.center .eyebrow{justify-content:center}
+.head.center .eyebrow::after{content:"";width:30px;height:1px;background:var(--gold)}
+.head.center .eyebrow::before{display:none}
+.head.center .lead{margin:0 auto}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 28px;border-radius:999px;font:700 .92rem/1 var(--head);letter-spacing:.02em;border:1.5px solid transparent;text-decoration:none;cursor:pointer;transition:transform .3s,box-shadow .3s,background .3s,color .3s,border-color .3s;white-space:nowrap}
+.btn:hover{transform:translateY(-2px)}
+.btn-gold{background:linear-gradient(135deg,var(--gold-hi),var(--gold) 45%,var(--gold-deep));color:#0A0A0A;box-shadow:0 12px 28px -12px rgba(201,164,98,.75)}
+.btn-gold:hover{box-shadow:0 16px 34px -12px rgba(201,164,98,.9)}
+.btn-line{border-color:var(--gold);color:var(--gold-hi);background:transparent}
+.btn-line:hover{background:var(--gold);color:#0A0A0A}
+.btn-dark{border-color:#0A0A0A;color:#0A0A0A;background:transparent}
+.btn-dark:hover{background:#0A0A0A;color:#fff}
+.btn-wa{background:#25D366;color:#06210F}
+.btn-wa:hover{box-shadow:0 14px 30px -12px rgba(37,211,102,.7)}
+
+/* Header */
+.site-header{position:fixed;inset:0 0 auto 0;z-index:100;background:rgba(10,10,10,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(201,164,98,.16)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:82px;gap:24px}
+.brand{display:flex;align-items:center;gap:14px;text-decoration:none;color:#fff}
+.brand svg{width:44px;height:44px}
+.brand-text{font:800 1.02rem var(--head);letter-spacing:.14em}
+.brand-text small{display:block;font:600 .62rem var(--head);letter-spacing:.3em;color:var(--gold);margin-top:3px}
+.nav-links{display:flex;align-items:center;gap:4px;list-style:none;margin:0;padding:0}
+.nav-links a{color:#CFCBC2;font:600 .86rem var(--head);padding:9px 13px;border-radius:999px;text-decoration:none;transition:color .25s,background .25s}
+.nav-links a:hover{color:var(--gold-hi);background:rgba(255,255,255,.05)}
+.nav-links .btn{margin-left:12px;padding:11px 20px;font-size:.84rem}
+.menu-btn{display:none;background:none;border:1px solid rgba(201,164,98,.5);color:var(--gold);border-radius:10px;padding:10px 14px;font:700 .8rem var(--head);cursor:pointer}
+
+/* Hero */
+.hero{min-height:100vh;min-height:100svh;display:flex;align-items:center;padding:150px 0 110px;background:radial-gradient(900px 520px at 80% 12%,rgba(201,164,98,.16),transparent 65%),radial-gradient(700px 500px at 0% 100%,rgba(201,164,98,.08),transparent 60%),var(--black);color:#fff;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(201,164,98,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(201,164,98,.05) 1px,transparent 1px);background-size:72px 72px;mask-image:radial-gradient(ellipse at center,#000 25%,transparent 75%);pointer-events:none}
+.hero-grid{position:relative;display:grid;grid-template-columns:1.25fr .75fr;gap:72px;align-items:center}
+.hero h1{color:#fff}
+.hero h1 em{font-family:var(--serif);font-style:italic;font-weight:600;color:var(--gold-hi)}
+.hero .lead{color:#C9C5BC;font-size:1.2rem;margin-top:24px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:38px}
+.hero-meta{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:70px;padding-top:30px;border-top:1px solid rgba(201,164,98,.2)}
+.hero-meta strong{display:block;font:800 1.5rem var(--head);color:var(--gold-hi);margin-bottom:4px}
+.hero-meta span{font-size:.86rem;color:var(--muted)}
+.emblem{position:relative;display:grid;place-items:center;aspect-ratio:1;max-width:400px;margin:0 auto;width:100%}
+.emblem::before{content:"";position:absolute;inset:0;border-radius:50%;border:1px solid rgba(201,164,98,.35)}
+.emblem::after{content:"";position:absolute;inset:18px;border-radius:50%;border:1px dashed rgba(201,164,98,.25)}
+.emblem .lockup{position:relative;text-align:center;padding:40px}
+.emblem .lockup svg{width:150px;height:150px;margin:0 auto}
+
+/* Logo lockup (SVG recreation of the TBHC mark) */
+.mark-wrap{display:flex;align-items:center;gap:18px}
+.divider-bar{width:2px;height:58px;background:linear-gradient(var(--gold-hi),var(--gold-deep));border-radius:2px}
+.tbhc{font:600 2.2rem var(--serif);letter-spacing:.12em;color:var(--gold-hi)}
+
+/* Cards */
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+.grid4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+.card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:42px 38px;display:flex;flex-direction:column;height:100%;transition:transform .45s,box-shadow .45s,border-color .45s}
+.card:hover{transform:translateY(-6px);box-shadow:0 24px 50px -24px rgba(10,10,10,.35);border-color:#D8D3C6}
+.card .ico{width:54px;height:54px;border-radius:16px;background:linear-gradient(135deg,#171717,#2B2B2B);display:grid;place-items:center;margin-bottom:26px}
+.card .ico svg{width:24px;height:24px;stroke:var(--gold)}
+.card .tag{font:700 .72rem var(--head);letter-spacing:.18em;text-transform:uppercase;color:var(--gold-text);margin-bottom:10px}
+.card p{color:var(--paper-muted)}
+.card ul{margin:18px 0 0;padding:0;list-style:none}
+.card li{padding:9px 0 9px 26px;border-top:1px solid var(--line);position:relative;color:var(--paper-ink);font-size:.95rem}
+.card li::before{content:"";position:absolute;left:0;top:17px;width:8px;height:8px;background:var(--gold);transform:rotate(45deg)}
+.card .btn{margin-top:auto;align-self:flex-start}
+.card .actions{margin-top:auto;padding-top:20px}
+
+/* Purpose / Vision / Mission */
+.pvm{border-top:1px solid #2A2A2A;padding:44px 0 0}
+.pvm .idx{font:800 .8rem var(--head);letter-spacing:.2em;color:var(--gold);margin-bottom:16px;display:block}
+.pvm h3{color:#fff;font-size:1.5rem;font-family:var(--serif);font-weight:600;letter-spacing:0}
+.pvm p{color:var(--muted);margin:0}
+.draft{display:block;margin-top:14px;font-size:.8rem;color:#7E786D}
+
+/* Values */
+.value{padding:34px 30px;border-radius:18px;background:var(--paper);border:1px solid var(--line)}
+.value .num{font:800 .8rem var(--head);color:var(--gold-text);letter-spacing:.16em;display:block;margin-bottom:12px}
+.value p{color:var(--paper-muted);margin:0;font-size:.96rem}
+
+/* Companies */
+.company .meta{display:grid;gap:6px;margin:18px 0 0;font-size:.92rem;color:var(--paper-muted)}
+.company .meta b{color:var(--paper-ink);font-weight:600}
+
+/* Structure */
+.structure{display:flex;flex-direction:column;align-items:center}
+.node{width:100%;max-width:380px;text-align:center;padding:26px 24px;border-radius:16px;background:#fff;border:1px solid var(--line)}
+.node.parent{background:var(--black);border-color:var(--gold-deep);color:#fff;max-width:440px}
+.node.parent h3{color:var(--gold-hi);font-family:var(--serif);font-size:1.5rem;letter-spacing:.02em}
+.node small{display:block;color:var(--paper-muted);font-size:.84rem;margin-top:4px}
+.node.parent small{color:var(--muted)}
+.stem{width:1px;height:44px;background:var(--gold)}
+.branch{display:grid;grid-template-columns:1fr 1fr;gap:28px;width:100%;position:relative}
+.branch::before{content:"";position:absolute;top:-22px;left:25%;right:25%;height:1px;background:var(--gold)}
+.branch .node{max-width:none}
+
+/* Photography */
+.photo{position:relative;border-radius:20px;overflow:hidden;box-shadow:0 30px 60px -30px rgba(0,0,0,.45);aspect-ratio:4/3}
+.photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+.photo:hover img{transform:scale(1.03)}
+.photo figcaption{position:absolute;left:18px;bottom:18px;background:rgba(10,10,10,.78);color:var(--gold-hi);font:700 .72rem var(--head);letter-spacing:.16em;text-transform:uppercase;padding:9px 14px;border-radius:999px;border:1px solid rgba(201,164,98,.35)}
+.photo-split{display:grid;grid-template-columns:1.05fr .95fr;gap:80px;align-items:center}
+.photo-split.reverse{grid-template-columns:.95fr 1.05fr}
+.photo-split.reverse .photo{order:2}
+
+/* Leader profiles */
+.leaders{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:26px}
+.leader{background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;transition:transform .45s,box-shadow .45s}
+.leader:hover{transform:translateY(-6px);box-shadow:0 24px 50px -24px rgba(10,10,10,.35)}
+.leader .portrait{aspect-ratio:1/1;background:linear-gradient(145deg,#171717,#2B2B2B);display:grid;place-items:center;position:relative}
+.leader .portrait .initials{width:96px;height:96px;border-radius:50%;border:1.5px solid var(--gold);display:grid;place-items:center;font:800 1.6rem var(--head);color:var(--gold-hi);letter-spacing:.04em}
+.leader .portrait small{position:absolute;bottom:14px;left:0;right:0;text-align:center;font:600 .7rem var(--head);letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.leader .info{padding:28px 28px 30px}
+.leader .role{font:700 .72rem var(--head);letter-spacing:.16em;text-transform:uppercase;color:var(--gold-text);margin-bottom:8px;display:block}
+.leader h3{margin-bottom:10px}
+.leader p{color:var(--paper-muted);font-size:.95rem;margin:0}
+.leader .pending{margin-top:14px}
+
+/* Leadership / News / Careers placeholders */
+.placeholder{border:1.5px dashed #C9B68A;border-radius:20px;background:linear-gradient(135deg,#FBF8EF,#F3F1EA);min-height:220px;display:grid;place-items:center;text-align:center;padding:34px;color:var(--paper-muted)}
+.placeholder strong{display:block;color:var(--paper-ink);font:700 1.02rem var(--head);margin-bottom:6px}
+
+/* Contact */
+.contact-cards{display:grid;gap:18px}
+.cc{display:flex;align-items:center;gap:20px;padding:24px 26px;border-radius:18px;background:#141414;border:1px solid #262626;text-decoration:none;color:var(--text);transition:border-color .3s,transform .3s,background .3s}
+.cc:hover{border-color:var(--gold);transform:translateX(4px);background:#171717}
+.cc .ico{width:50px;height:50px;border-radius:14px;background:#0A0A0A;border:1px solid #2E2E2E;display:grid;place-items:center;flex:none}
+.cc .ico svg{width:22px;height:22px;stroke:var(--gold)}
+.cc strong{display:block;color:#fff;font:700 1rem var(--head)}
+.cc span{color:var(--muted);font-size:.92rem}
+.cc .arr{margin-left:auto;color:var(--gold);font-size:1.2rem}
+.enquiry{background:#fff;border-radius:24px;padding:44px 40px;color:var(--paper-ink)}
+.enquiry h3{font-size:1.4rem}
+.enquiry p{color:var(--paper-muted);font-size:.95rem}
+.field{margin-top:20px}
+.field label{display:block;font:700 .84rem var(--head);color:var(--paper-ink);margin-bottom:8px}
+.field select,.field input,.field textarea{width:100%;font:inherit;padding:14px 16px;border:1.5px solid #D9D4C8;border-radius:12px;background:#fff;color:var(--paper-ink)}
+.field textarea{min-height:110px;resize:vertical}
+.field select:focus,.field input:focus,.field textarea:focus{outline:none;border-color:var(--gold-text);box-shadow:0 0 0 4px rgba(201,164,98,.2)}
+.enquiry .btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.enquiry .btns .btn{flex:1;justify-content:center;min-width:180px}
+.enquiry .hint{font-size:.82rem;color:var(--paper-muted);margin-top:16px}
+
+/* Social */
+.socials{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+.socials a{width:46px;height:46px;border-radius:50%;border:1px solid #333;display:grid;place-items:center;color:#D6D2C9;transition:all .3s;text-decoration:none}
+.socials a:hover{border-color:var(--gold);color:var(--gold-hi);transform:translateY(-2px)}
+.socials svg{width:20px;height:20px;fill:currentColor}
+
+/* CTA band */
+.band{background:linear-gradient(120deg,#141414,#1F1A10 55%,#2A2112);border:1px solid rgba(201,164,98,.28);border-radius:28px;padding:72px 60px;display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap}
+.band h2{color:#fff;margin:0 0 8px}
+.band p{color:var(--muted);margin:0;max-width:580px}
+
+/* Footer */
+.site-footer{background:#050505;color:#9C978C;padding:90px 0 40px;font-size:.92rem;border-top:1px solid #1E1E1E}
+.site-footer h4{color:#fff;font:700 .78rem var(--head);letter-spacing:.18em;text-transform:uppercase;margin:0 0 18px}
+.foot{display:grid;grid-template-columns:1.6fr 1fr 1fr 1.2fr;gap:48px}
+.foot p{max-width:320px;color:#8A857B}
+.foot a{display:block;color:#9C978C;text-decoration:none;padding:5px 0}
+.foot a:hover{color:var(--gold-hi)}
+.foot-bottom{margin-top:66px;padding-top:26px;border-top:1px solid #1E1E1E;display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;font-size:.84rem;color:#6F6A61}
+.tagline{font:600 .72rem var(--head);letter-spacing:.26em;color:var(--gold);text-transform:uppercase}
+
+/* Responsive */
+@media (max-width:980px){
+  .hero-grid,.grid2,.grid3,.foot{grid-template-columns:1fr}
+  .grid4{grid-template-columns:1fr 1fr}
+  .emblem{max-width:300px;margin-top:20px}
+  .band{padding:52px 34px}
+}
+@media (max-width:860px){
+  section{padding:88px 0}
+  .menu-btn{display:block}
+  .nav-links{position:fixed;top:82px;left:16px;right:16px;flex-direction:column;align-items:stretch;background:#0F0F0F;border:1px solid #2A2A2A;border-radius:18px;padding:12px;opacity:0;pointer-events:none;transform:translateY(-8px);transition:opacity .3s,transform .3s}
+  .nav-links.open{opacity:1;pointer-events:auto;transform:none}
+  .nav-links a{padding:14px 16px}
+  .nav-links .btn{margin:8px 0 0;justify-content:center}
+  .branch{grid-template-columns:1fr}
+  .branch::before{display:none}
+  .hero-meta{grid-template-columns:1fr}
+  .enquiry{padding:32px 26px}
+}
+@media (max-width:560px){
+  .wrap{padding:0 20px}
+  .grid4{grid-template-columns:1fr}
+  .card{padding:34px 26px}
+  .tbhc{font-size:1.8rem}
+  .brand-text{font-size:.9rem}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="TBHC, The Billion Holdings Corporation, home">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="gg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F1DCA6"/><stop offset=".5" stop-color="#C9A462"/><stop offset="1" stop-color="#8E6B2E"/></linearGradient></defs><path fill="url(#gg)" d="M4 60V26l9-7 5 5v36H4zm14 0V12l10-9 4 6v51H18zm22 0V24l8-6 8 5v37H40z"/><rect x="8" y="34" width="4" height="4" fill="#0A0A0A"/><rect x="8" y="44" width="4" height="4" fill="#0A0A0A"/><rect x="22" y="22" width="4" height="4" fill="#0A0A0A"/><rect x="22" y="32" width="4" height="4" fill="#0A0A0A"/><rect x="22" y="42" width="4" height="4" fill="#0A0A0A"/><rect x="44" y="34" width="4" height="4" fill="#0A0A0A"/><rect x="44" y="44" width="4" height="4" fill="#0A0A0A"/></svg>
+      <span class="brand-text">TBHC<small>STABILITY THROUGH STRATEGY</small></span>
+    </a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav aria-label="Main">
+      <ul class="nav-links" id="nav">
+        <li><a href="#about">About</a></li>
+        <li><a href="#purpose">Purpose</a></li>
+        <li><a href="#companies">Companies</a></li>
+        <li><a href="#leadership">Leadership</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#careers">Careers</a></li>
+        <li><a class="btn btn-gold" href="#contact">Contact Us</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">The Billion Holdings Corporation</span>
+      <h1>Stability <em>through</em> strategy.</h1>
+      <p class="lead">TBHC is a parent holding company. Its independently registered subsidiaries serve customers in tourism and human resources, each with its own name, identity and accountability.</p>
+      <div class="hero-actions">
+        <a class="btn btn-gold" href="#companies">Explore our companies &rarr;</a>
+        <a class="btn btn-line" href="#contact">Contact us</a>
+      </div>
+      <div class="hero-meta">
+        <div><strong>Parent</strong><span>Group governance and direction</span></div>
+        <div><strong>2 subsidiaries</strong><span>Tourism and human resources</span></div>
+        <div><strong>Separate entities</strong><span>Each with its own legal identity</span></div>
+      </div>
+    </div>
+    <div class="emblem" aria-hidden="true">
+      <div class="lockup">
+        <div class="mark-wrap" style="justify-content:center">
+          <svg viewBox="0 0 64 64" style="width:92px;height:92px"><path fill="url(#gg)" d="M4 60V26l9-7 5 5v36H4zm14 0V12l10-9 4 6v51H18zm22 0V24l8-6 8 5v37H40z"/></svg>
+          <div class="divider-bar"></div>
+          <div class="tbhc">TBHC</div>
+        </div>
+        <p class="tagline" style="margin-top:26px">Stability through strategy</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap grid2" style="align-items:center;gap:80px">
+    <div>
+      <span class="eyebrow">About the group</span>
+      <h2>One group. Distinct companies. Clear accountability.</h2>
+      <p class="lead">The parent company provides direction, governance and shared standards. Each subsidiary is a separately registered company with its own services, team and contact channels, so customers always know exactly who they are dealing with.</p>
+      <p class="pending">Official history and founding details pending management approval.</p>
+    </div>
+    <figure class="photo" style="margin:0">
+      <img src="1.jfif" alt="A presenter explaining growth charts to a team in a glass-walled boardroom" loading="lazy" width="736" height="736">
+      <figcaption>Strategy in action</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="dark" id="purpose">
+  <div class="wrap">
+    <div class="head center">
+      <span class="eyebrow">Our foundation</span>
+      <h2>Purpose, vision and mission</h2>
+      <p class="lead">The principles that guide every decision across the group.</p>
+    </div>
+    <div class="grid3">
+      <div class="pvm">
+        <span class="idx">01 · PURPOSE</span>
+        <h3>Why we exist</h3>
+        <p>To build lasting value by connecting strong businesses, capable people and trusted service across tourism and human resources.</p>
+        <span class="draft">Draft wording for management approval.</span>
+      </div>
+      <div class="pvm">
+        <span class="idx">02 · VISION</span>
+        <h3>Where we are going</h3>
+        <p>To be a respected, growth-oriented holding group known for stability, integrity and excellence in every sector we serve.</p>
+        <span class="draft">Draft wording for management approval.</span>
+      </div>
+      <div class="pvm">
+        <span class="idx">03 · MISSION</span>
+        <h3>How we deliver</h3>
+        <p>To grow independently strong companies through disciplined strategy, transparent governance and a real commitment to customers, partners and teams.</p>
+        <span class="draft">Draft wording for management approval.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="head center">
+      <span class="eyebrow">Core values</span>
+      <h2>What guides our conduct</h2>
+    </div>
+    <div class="grid4">
+      <div class="value"><span class="num">01</span><h3>Integrity</h3><p>Accurate information, honest dealings and transparent governance across the group.</p></div>
+      <div class="value"><span class="num">02</span><h3>Strategy</h3><p>Disciplined, long-term decisions that protect stability and create sustainable growth.</p></div>
+      <div class="value"><span class="num">03</span><h3>Excellence</h3><p>High standards in service delivery, quality and professional conduct.</p></div>
+      <div class="value"><span class="num">04</span><h3>Partnership</h3><p>Respect for customers, partners and the people who make each company successful.</p></div>
+    </div>
+    <p class="pending" style="margin-top:28px">Core values wording pending management approval.</p>
+  </div>
+</section>
+
+<section class="alt" id="partnerships">
+  <div class="wrap photo-split reverse">
+    <figure class="photo" style="margin:0">
+      <img src="2.jfif" alt="Two professionals shaking hands in front of a map of Africa with business icons" loading="lazy" width="736" height="656">
+      <figcaption>Partnerships across markets</figcaption>
+    </figure>
+    <div>
+      <span class="eyebrow">Partnerships</span>
+      <h2>Building trusted relationships across markets</h2>
+      <p class="lead">TBHC works with customers, partners and institutions that share a commitment to stability and long-term growth. Partnership enquiries are welcome.</p>
+      <div style="margin-top:28px"><a class="btn btn-dark" href="#contact" data-cat="partnership">Start a partnership enquiry &rarr;</a></div>
+    </div>
+  </div>
+</section>
+
+<section id="companies">
+  <div class="wrap">
+    <div class="head center">
+      <span class="eyebrow">Our companies</span>
+      <h2>Two subsidiaries, each with its own identity</h2>
+      <p class="lead">Each company is independently registered. Choose one to see its services and reach it directly.</p>
+    </div>
+    <div class="grid2">
+      <article class="card company">
+        <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></div>
+        <span class="tag">Tourism</span>
+        <h3>Tourism subsidiary</h3>
+        <p>Travel and tourism services delivered by a dedicated, independently registered company.</p>
+        <ul>
+          <li>Travel and tourism services</li>
+          <li>Tourism experiences and operations</li>
+          <li>Destination and partnership services</li>
+        </ul>
+        <div class="meta">
+          <span><b>Legal name:</b> <span class="pending">pending confirmation</span></span>
+          <span><b>Parent:</b> The Billion Holdings Corporation</span>
+        </div>
+        <div class="actions"><a class="btn btn-dark" href="#contact" data-cat="tourism">Enquire about tourism &rarr;</a></div>
+      </article>
+      <article class="card company">
+        <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M16 4.5a3.5 3.5 0 0 1 0 7M18 14.5a6.5 6.5 0 0 1 3.5 5.5"/></svg></div>
+        <span class="tag">Human Resources</span>
+        <h3>Human resources subsidiary</h3>
+        <p>Recruitment, talent sourcing and workforce support, delivered by a separate registered company.</p>
+        <ul>
+          <li>Recruitment services</li>
+          <li>Talent sourcing</li>
+          <li>Workforce support and HR consulting</li>
+        </ul>
+        <div class="meta">
+          <span><b>Legal name:</b> <span class="pending">pending confirmation</span></span>
+          <span><b>Parent:</b> The Billion Holdings Corporation</span>
+        </div>
+        <div class="actions"><a class="btn btn-dark" href="#contact" data-cat="human-resources">Enquire about HR &rarr;</a></div>
+      </article>
+    </div>
+    <p class="pending" style="margin-top:24px">Service lists to be confirmed against actual operations and applicable licences.</p>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="head center">
+      <span class="eyebrow">Group structure</span>
+      <h2>How TBHC is organized</h2>
+    </div>
+    <div class="structure">
+      <div class="node parent"><h3>The Billion Holdings Corporation</h3><small>Parent holding company · TBHC</small></div>
+      <div class="stem" aria-hidden="true"></div>
+      <div class="branch">
+        <div class="node"><h3>Tourism subsidiary</h3><small>Registered legal name pending</small></div>
+        <div class="node"><h3>Human resources subsidiary</h3><small>Registered legal name pending</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="leadership">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Leadership</span>
+      <h2>Parent company leadership</h2>
+      <p class="lead">Verified profiles appear here once approved. Subsidiary leaders are presented on their own company profile.</p>
+    </div>
+    <div class="leaders">
+      <article class="leader">
+        <div class="portrait"><div class="initials" aria-hidden="true">CH</div><small>Photo pending</small></div>
+        <div class="info">
+          <span class="role">Chairman</span>
+          <h3>Full name pending</h3>
+          <p>Provides overall direction for the group and chairs the board. Profile background to be provided and verified.</p>
+          <span class="pending">Verified biography pending</span>
+        </div>
+      </article>
+      <article class="leader">
+        <div class="portrait"><div class="initials" aria-hidden="true">CE</div><small>Photo pending</small></div>
+        <div class="info">
+          <span class="role">Chief Executive Officer</span>
+          <h3>Full name pending</h3>
+          <p>Leads group operations and oversees the performance of the tourism and human resources subsidiaries.</p>
+          <span class="pending">Verified biography pending</span>
+        </div>
+      </article>
+      <article class="leader">
+        <div class="portrait"><div class="initials" aria-hidden="true">GS</div><small>Photo pending</small></div>
+        <div class="info">
+          <span class="role">Director of Governance and Strategy</span>
+          <h3>Full name pending</h3>
+          <p>Oversees group governance, strategic planning and compliance across all registered companies.</p>
+          <span class="pending">Verified biography pending</span>
+        </div>
+      </article>
+    </div>
+    <p class="pending" style="margin-top:26px">Leader names, photographs and biographies to be supplied and approved by management. Subsidiary leaders appear on their own company profiles.</p>
+  </div>
+</section>
+
+<section class="alt" id="news">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">News and updates</span>
+      <h2>Latest announcements</h2>
+      <p class="lead">Approved announcements from the group and its subsidiaries will be published here.</p>
+    </div>
+    <div class="placeholder" style="min-height:200px"><div><strong>No announcements yet</strong>Approved updates will appear here</div></div>
+  </div>
+</section>
+
+<section id="careers">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Careers</span>
+      <h2>Work with us</h2>
+      <p class="lead">Every opportunity is listed under the company that employs for the role, so you always know who you would be joining. Application instructions are provided per company.</p>
+    </div>
+    <div class="band">
+      <div><h2>Current openings</h2><p>Openings are pending. Send us a careers enquiry to be notified when roles are published.</p></div>
+      <a class="btn btn-gold" href="#contact" data-cat="careers">Ask about careers &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<section class="dark" id="contact">
+  <div class="wrap grid2" style="gap:64px;align-items:start">
+    <div>
+      <span class="eyebrow">Contact us</span>
+      <h2>Let's start a conversation</h2>
+      <p class="lead">Reach us directly on WhatsApp or by email, or follow TBHC on social media.</p>
+      <div class="contact-cards" style="margin-top:34px">
+        <a class="cc" id="cc-wa" href="#" target="_blank" rel="noopener">
+          <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linejoin="round"><path d="M4 20l1.3-4.1A8 8 0 1 1 8.2 19z"/></svg></span>
+          <span><strong>WhatsApp</strong><span id="wa-label">Chat with our team</span></span>
+          <span class="arr" aria-hidden="true">&rarr;</span>
+        </a>
+        <a class="cc" id="cc-mail" href="#">
+          <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>
+          <span><strong>Email</strong><span id="mail-label">Write to us</span></span>
+          <span class="arr" aria-hidden="true">&rarr;</span>
+        </a>
+        <div class="cc" style="cursor:default">
+          <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span>
+          <span><strong>Office</strong><span class="pending">Address pending</span></span>
+        </div>
+      </div>
+      <div class="socials" aria-label="Social media">
+        <a id="soc-ig" href="#" target="_blank" rel="noopener" aria-label="TBHC on Instagram">
+          <svg viewBox="0 0 24 24"><path d="M12 7.2A4.8 4.8 0 1 0 12 16.8 4.8 4.8 0 0 0 12 7.2zm0 7.9a3.1 3.1 0 1 1 0-6.2 3.1 3.1 0 0 1 0 6.2zM17.3 6.2a1.1 1.1 0 1 1-2.2 0 1.1 1.1 0 0 1 2.2 0zM21.8 7.4c-.1-1.6-.5-3-1.6-4.1S17.9 1.8 16.3 1.7C14.7 1.6 9.3 1.6 7.7 1.7 6.1 1.8 4.7 2.2 3.6 3.3S2 5.8 1.9 7.4c-.1 1.6-.1 6.9 0 8.5.1 1.6.5 3 1.6 4.1s2.5 1.5 4.1 1.6c1.6.1 6.9.1 8.5 0 1.6-.1 3-.5 4.1-1.6s1.5-2.5 1.6-4.1c.1-1.6.1-6.9 0-8.5zM19.7 18.2c-.3.8-.9 1.5-1.7 1.8-1.2.5-4 .4-5.9.4s-4.7.1-5.9-.4c-.8-.3-1.5-.9-1.8-1.7-.5-1.2-.4-4-.4-5.9s-.1-4.7.4-5.9c.3-.8.9-1.5 1.8-1.8 1.2-.5 4-.4 5.9-.4s4.7-.1 5.9.4c.8.3 1.5.9 1.8 1.8.5 1.2.4 4 .4 5.9s.1 4.7-.4 5.9z"/></svg>
+        </a>
+        <a id="soc-wa" href="#" target="_blank" rel="noopener" aria-label="TBHC on WhatsApp">
+          <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 1.8a8.2 8.2 0 1 1-4.2 15.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 0 1 12 3.8zm-3.5 4.3c-.2 0-.5 0-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.8 2.2.9 2.6.7 3.1.7.5-.1 1.6-.7 1.8-1.3.2-.6.2-1.2.2-1.3-.1-.1-.3-.2-.6-.4l-1.9-.9c-.3-.1-.5-.1-.7.1l-.9 1.1c-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.2-1.4-.8-.7-1.4-1.6-1.5-1.9-.2-.3 0-.4.1-.6l.4-.5.3-.5c.1-.2 0-.4 0-.5l-.9-2.1c-.2-.6-.5-.5-.7-.5z"/></svg>
+        </a>
+        <a id="soc-mail" href="#" aria-label="Email TBHC">
+          <svg viewBox="0 0 24 24"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm1 2.4V17h16V7.4l-8 5.2-8-5.2zM4.4 7l7.6 4.9L19.6 7H4.4z"/></svg>
+        </a>
+      </div>
+      <p class="pending" style="margin-top:18px;color:var(--muted)">Social handles, WhatsApp number and email address are pending confirmation.</p>
+    </div>
+
+    <div class="enquiry">
+      <h3>Send an enquiry</h3>
+      <p>Choose the category that fits. We will open WhatsApp or your email app with your enquiry ready to send.</p>
+      <div class="field">
+        <label for="cat">Enquiry category</label>
+        <select id="cat">
+          <option value="general">General enquiry</option>
+          <option value="partnership">Business partnership</option>
+          <option value="tourism">Tourism services</option>
+          <option value="human-resources">Human resources services</option>
+          <option value="careers">Careers</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="who">Your name</label>
+        <input id="who" type="text" autocomplete="name" placeholder="Full name">
+      </div>
+      <div class="field">
+        <label for="msg">Message</label>
+        <textarea id="msg" placeholder="How can we help?"></textarea>
+      </div>
+      <div class="btns">
+        <a class="btn btn-wa" id="send-wa" href="#" target="_blank" rel="noopener">WhatsApp</a>
+        <a class="btn btn-dark" id="send-mail" href="#" style="border-color:#0A0A0A">Email</a>
+      </div>
+      <p class="hint">Your message is sent from your own WhatsApp or email app. TBHC does not store it through this page.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <h4>TBHC</h4>
+        <p>The Billion Holdings Corporation. A parent holding company with independently registered subsidiaries in tourism and human resources.</p>
+        <div class="socials" style="margin-top:20px">
+          <a href="#" class="soc-link" data-soc="ig" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 7.2A4.8 4.8 0 1 0 12 16.8 4.8 4.8 0 0 0 12 7.2zm0 7.9a3.1 3.1 0 1 1 0-6.2 3.1 3.1 0 0 1 0 6.2zM17.3 6.2a1.1 1.1 0 1 1-2.2 0 1.1 1.1 0 0 1 2.2 0zM21.8 7.4c-.1-1.6-.5-3-1.6-4.1S17.9 1.8 16.3 1.7C14.7 1.6 9.3 1.6 7.7 1.7 6.1 1.8 4.7 2.2 3.6 3.3S2 5.8 1.9 7.4c-.1 1.6-.1 6.9 0 8.5.1 1.6.5 3 1.6 4.1s2.5 1.5 4.1 1.6c1.6.1 6.9.1 8.5 0 1.6-.1 3-.5 4.1-1.6s1.5-2.5 1.6-4.1c.1-1.6.1-6.9 0-8.5z"/></svg></a>
+          <a href="#" class="soc-link" data-soc="wa" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg></a>
+          <a href="#" class="soc-link" data-soc="mail" aria-label="Email"><svg viewBox="0 0 24 24"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Group</h4>
+        <a href="#about">About</a><a href="#purpose">Purpose and mission</a><a href="#leadership">Leadership</a><a href="#news">News</a>
+      </div>
+      <div>
+        <h4>Companies</h4>
+        <a href="#companies">Tourism</a><a href="#companies">Human Resources</a><a href="#careers">Careers</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="#contact">Contact us</a><a href="#" class="soc-link" data-soc="wa">WhatsApp</a><a href="#" class="soc-link" data-soc="mail">Email</a>
+        <a href="#">Privacy policy</a><a href="#">Terms</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© The Billion Holdings Corporation (TBHC). All rights reserved.</span>
+      <span>Registration details and legal disclosures pending management approval.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  /* ===== CONTACT SETTINGS: replace these placeholders with the real details ===== */
+  var CONFIG = {
+    whatsappNumber: '255000000000',          // international format, digits only, e.g. 2557XXXXXXXX
+    email: 'info@example.com',               // official group email
+    instagram: 'https://www.instagram.com/YOUR_HANDLE',
+    companyName: 'The Billion Holdings Corporation (TBHC)'
+  };
+  /* =========================================================================== */
+
+  var labels = { general: 'General enquiry', partnership: 'Business partnership', tourism: 'Tourism services', 'human-resources': 'Human resources services', careers: 'Careers', other: 'Other' };
+  var cat = document.getElementById('cat');
+  var who = document.getElementById('who');
+  var msg = document.getElementById('msg');
+
+  function waUrl(text) {
+    return 'https://wa.me/' + CONFIG.whatsappNumber + '?text=' + encodeURIComponent(text);
+  }
+  function mailUrl(subject, body) {
+    return 'mailto:' + CONFIG.email + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+  }
+  function enquiryText() {
+    var c = labels[cat.value] || 'General enquiry';
+    var n = who.value.trim();
+    var m = msg.value.trim();
+    return 'Enquiry: ' + c + '\n' + (n ? 'Name: ' + n + '\n' : '') + (m ? '\n' + m : '');
+  }
+
+  function refresh() {
+    var text = enquiryText();
+    var subject = 'TBHC enquiry: ' + (labels[cat.value] || 'General');
+    document.getElementById('send-wa').href = waUrl(text);
+    document.getElementById('send-mail').href = mailUrl(subject, text);
+    document.getElementById('cc-wa').href = waUrl('Hello TBHC, I would like to make an enquiry.');
+    document.getElementById('cc-mail').href = mailUrl('TBHC enquiry', 'Hello TBHC, I would like to make an enquiry.');
+    document.getElementById('soc-wa').href = waUrl('Hello TBHC.');
+    document.getElementById('soc-mail').href = mailUrl('TBHC enquiry', '');
+    document.getElementById('soc-ig').href = CONFIG.instagram;
+    document.querySelectorAll('.soc-link').forEach(function (a) {
+      var k = a.getAttribute('data-soc');
+      a.href = k === 'ig' ? CONFIG.instagram : k === 'wa' ? waUrl('Hello TBHC.') : mailUrl('TBHC enquiry', '');
+      if (k === 'ig') { a.target = '_blank'; a.rel = 'noopener'; }
+    });
+  }
+
+  cat.addEventListener('change', refresh);
+  who.addEventListener('input', refresh);
+  msg.addEventListener('input', refresh);
+
+  // Category buttons in company cards and careers preselect the enquiry form
+  document.querySelectorAll('[data-cat]').forEach(function (a) {
+    a.addEventListener('click', function () {
+      cat.value = a.getAttribute('data-cat');
+      refresh();
+    });
+  });
+
+  // Mobile menu
+  var btn = document.querySelector('.menu-btn');
+  var nav = document.getElementById('nav');
+  btn.addEventListener('click', function () {
+    var open = nav.classList.toggle('open');
+    btn.setAttribute('aria-expanded', String(open));
+  });
+  nav.addEventListener('click', function (e) {
+    if (e.target.tagName === 'A') { nav.classList.remove('open'); btn.setAttribute('aria-expanded', 'false'); }
+  });
+
+  refresh();
+})();
+</script>
+</body>
+</html>
